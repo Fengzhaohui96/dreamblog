@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="width=device-width,initial-scale=1.0">
+    <title>分类</title>
+    <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body>
+
+
+<nav th:replace="_fragments::menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small  ">
+    <div class="ui container">
+        <!--导航-->
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">微博</h2>
+            <a href="#" class=" m-item item m-mobile-hide"> <i class=" home icon"></i>  首页</a>
+            <a href="#" class=" active m-item item m-mobile-hide"> <i class=" idea icon"></i>  分类</a>
+            <a href="#" class=" m-item item m-mobile-hide"> <i class="  tags icon"></i>  标签</a>
+            <a href="#" class=" m-item item m-mobile-hide"> <i class=" clone icon"></i>  归档</a>
+            <a href="#" class=" m-item item m-mobile-hide"><i class="info icon"></i> 关于我</a>
+            <div class="right item">
+                <div class="ui icon inverted transparent input m-mobile-hide">
+                    <input type="text" placeholder="搜索....">
+                    <i class="search link icon"></i>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+
+    </div>
+
+
+    <a href="#" class=" ui menu toggle black icon button  m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+
+    </a>
+</nav>
+
+
+<!--中间内容-->
+<div class="m-padded-tb-big m-container-small">
+<div class="ui container">
+
+    <div class="ui top attached segment">
+        <div class="ui  middle aligned two column grid">
+            <div class="column">
+                <h3 class="ui teal header">分类</h3>
+            </div>
+            <div class=" right aligned column">
+                共<h2 class="ui green header m-inline-block m-text-thin " th:text="${#arrays.length(types)}">15</h2>篇
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+<div class="ui attached segment m-padded-tb-large">
+<div class="ui labeled button m-margin-tb-tiny" th:each="type : ${types}">
+    <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic  button" th:classappend="${type.id==activeTypeId} ? 'teal'" th:text="${type.name}">java</a>
+    <div class="ui basic  left pointing label" th:classappend="${type.id==activeTypeId} ? 'teal'" th:text="${#arrays.length(type.blogs)}">24</div>
+</div>
+    <!--
+        <div class="ui labeled button m-margin-tb-tiny">
+            <a href="#" class="ui basic teal button">java</a>
+
+            <div class="ui basic teal left pointing label">24</div>
+
+        </div>-->
+
+    </div>
+    </div>
+
+        <div class="ui top attached teal segment">
+            <div class="ui padded vertical segment m-padded-tb-large" th:each="blog:${page.content}">
+                <div class="ui middle aligned mobile reversed stackable grid" >
+
+                    <div class="eleven wide column">
+
+                        <h3 class="ui header"><a href="#" class="m-black" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"   th:text="${blog.title}">你真的知道吗</a></h3>
+                        <p class="m-text" th:text="|${blog.description}....|"> 7月13日23时8分，随着操作手驾驶推土机将最后一车土石倒入决口处，江西省鄱阳县问桂道圩决口封堵现场响起一片欢呼声。在抢险人员连续奋战83小时后，127米宽的决口成功合龙。</p>
+
+                        <div class="ui grid">
+                            <div class="eleven wide column">
+
+
+                                <div class="ui  mini  horizontal link list">
+                                    <div class="item">
+
+                                        <img src="../static/images/ces.jpg" th:src="@{${blog.user.avatar}}"alt="" class="ui avatar image">
+                                        <div class="content">
+                                            <a href="#" class="header" th:text="${blog.user.nickname}"> 冯兆辉</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020-07-14</span>
+
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="eye icon"></i> <span th:text="${blog.views}">200</span>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal  basic label m-text-thin m-padded-mini" th:text="${blog.type.name}"> 更多信息</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="five wide column">
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                            <img src="../static/images/ces.jpg" th:src="@{${blog.firstPicture}}"alt="" class="ui rounded image "  >
+
+
+                        </a>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <a href="#" th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
+                </div>
+                <div class="right aligned column">
+                    <a href="#" th:href="@{/(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+
+        <div class="ui center aligned container">
+            <div class="ui inverted divided  stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list ">
+                        <div class="item">
+                            <img src="../static/images/4a0b9c5b9f29fbde230c995bb711587.jpg" class="ui rounded image" alt="" style="width: 110px">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">最新博客</h4>
+                    <div class="ui inverted link list ">
+                        <a href="#" class="item">用户故事(User Story)</a>
+                        <a href="#" class="item">用户故事(User Story)</a>
+                        <a href="#" class="item">用户故事(User Story)</a>
+
+                    </div>
+
+                </div>
+                <div class="three wide column">
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">最新博客</h4>
+                        <div class="ui inverted link list ">
+                            <a href="#" class="item">用户故事(User Story)</a>
+                            <a href="#" class="item">用户故事(User Story)</a>
+                            <a href="#" class="item">用户故事(User Story)</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">最新博客</h4>
+                    <P class="m-text-lined m-text-spaced m-text-thin m-opacity-mini">我的个人博客欢迎大家访问</P>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+
+            <p class="m-text-lined m-text-spaced m-text-thin m-opacity-tiny"> 2020-2025 Designd by fzh</p>
+
+        </div>
+
+
+
+
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+
+    <script src="../lib/prism/prism.js"></script>
+    <script src="../lib/tocbot/tocbot.min.js"></script>
+    <script src="../lib/qrcode/qrcode.min.js"></script>
+
+    <script>
+        $('.menu.toggle')  .click(
+            function () {
+                $('.m-item').toggleClass('m-mobile-hide');
+
+
+            }
+
+
+
+        );
+                $('#nav').show(500);
+
+
+    </script>
+
+
+
+    </body>
+    </html>

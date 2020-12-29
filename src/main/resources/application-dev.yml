@@ -1,0 +1,21 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.132.227.205:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: fzh020688
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+    mode: HTML
+logging:
+  level:
+    root: info
+    com.example.blog: debug
+  file: log/blog-dev.log

@@ -1,0 +1,590 @@
+2020-12-15 21:16:33.527  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : Starting BolgApplication on LAPTOP-A3IKRBMD with PID 9572 (C:\Users\feizhou\IdeaProjects\bolg\target\classes started by feizhou in C:\Users\feizhou\IdeaProjects\bolg)
+2020-12-15 21:16:33.531  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : The following profiles are active: dev
+2020-12-15 21:16:33.734  INFO 9572 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@726f176b: startup date [Tue Dec 15 21:16:33 CST 2020]; root of context hierarchy
+2020-12-15 21:16:36.132  INFO 9572 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-12-15 21:16:36.143  INFO 9572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-15 21:16:36.145  INFO 9572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-12-15 21:16:36.250  INFO 9572 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-15 21:16:36.250  INFO 9572 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2517 ms
+2020-12-15 21:16:36.463  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-12-15 21:16:36.469  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-12-15 21:16:36.469  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-12-15 21:16:36.469  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-12-15 21:16:36.469  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-12-15 21:16:37.036  INFO 9572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-12-15 21:16:37.098  INFO 9572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-15 21:16:37.189  INFO 9572 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-12-15 21:16:37.191  INFO 9572 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-12-15 21:16:37.192  INFO 9572 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-12-15 21:16:37.246  INFO 9572 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-12-15 21:16:37.843  INFO 9572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-12-15 21:16:38.572  INFO 9572 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-12-15 21:16:38.884  INFO 9572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 21:16:39.224  INFO 9572 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-12-15 21:16:40.259  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@726f176b: startup date [Tue Dec 15 21:16:33 CST 2020]; root of context hierarchy
+2020-12-15 21:16:40.428  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.logout(javax.servlet.http.HttpSession)
+2020-12-15 21:16:40.430  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.432  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.LoginPage()
+2020-12-15 21:16:40.434  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.blogByTagsController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 21:16:40.436  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.437  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 21:16:40.438  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-12-15 21:16:40.438  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.post(com.example.bolg.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-12-15 21:16:40.439  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 21:16:40.439  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 21:16:40.441  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 21:16:40.441  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.post(com.example.bolg.po.Comment,javax.servlet.http.HttpSession)
+2020-12-15 21:16:40.444  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.444  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.input(org.springframework.ui.Model)
+2020-12-15 21:16:40.445  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 21:16:40.445  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.post(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.445  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editPost(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.446  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 21:16:40.451  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.452  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-12-15 21:16:40.452  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 21:16:40.452  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.post(com.example.bolg.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.453  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editPost(com.example.bolg.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 21:16:40.453  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 21:16:40.454  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.blogByTypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 21:16:40.456  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 21:16:40.456  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-12-15 21:16:40.457  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 21:16:40.459  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-12-15 21:16:40.460  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-12-15 21:16:40.581  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 21:16:40.582  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 21:16:40.616  INFO 9572 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-12-15 21:16:40.656  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 21:16:41.848  INFO 9572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-15 21:16:41.953  INFO 9572 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-12-15 21:16:42.011  INFO 9572 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-12-15 21:16:42.016  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : Started BolgApplication in 8.999 seconds (JVM running for 11.318)
+2020-12-15 22:09:12.650  INFO 9572 --- [Thread-25] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@726f176b: startup date [Tue Dec 15 21:16:33 CST 2020]; root of context hierarchy
+2020-12-15 22:09:12.652  INFO 9572 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-12-15 22:09:12.654  INFO 9572 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:09:13.080  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : Starting BolgApplication on LAPTOP-A3IKRBMD with PID 9572 (C:\Users\feizhou\IdeaProjects\bolg\target\classes started by feizhou in C:\Users\feizhou\IdeaProjects\bolg)
+2020-12-15 22:09:13.080  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : The following profiles are active: dev
+2020-12-15 22:09:13.082  INFO 9572 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8da6170: startup date [Tue Dec 15 22:09:13 CST 2020]; root of context hierarchy
+2020-12-15 22:09:13.835  INFO 9572 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-12-15 22:09:13.835  INFO 9572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-15 22:09:13.836  INFO 9572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-12-15 22:09:14.010  INFO 9572 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-15 22:09:14.011  INFO 9572 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 929 ms
+2020-12-15 22:09:14.050  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-12-15 22:09:14.050  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-12-15 22:09:14.051  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-12-15 22:09:14.051  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-12-15 22:09:14.051  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-12-15 22:09:14.164  INFO 9572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:09:14.164  INFO 9572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-15 22:09:14.299  INFO 9572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-12-15 22:09:14.309  INFO 9572 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-12-15 22:09:14.310  INFO 9572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:09:14.392  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8da6170: startup date [Tue Dec 15 22:09:13 CST 2020]; root of context hierarchy
+2020-12-15 22:09:14.406  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-12-15 22:09:14.406  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-12-15 22:09:14.417  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:09:14.417  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:09:14.435  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:09:14.761  INFO 9572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-15 22:09:14.857  INFO 9572 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-12-15 22:09:14.867  INFO 9572 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-12-15 22:09:14.869  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : Started BolgApplication in 1.858 seconds (JVM running for 3164.171)
+2020-12-15 22:09:17.657  INFO 9572 --- [Thread-34] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8da6170: startup date [Tue Dec 15 22:09:13 CST 2020]; root of context hierarchy
+2020-12-15 22:09:17.659  INFO 9572 --- [Thread-34] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-12-15 22:09:17.660  INFO 9572 --- [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:09:18.063  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : Starting BolgApplication on LAPTOP-A3IKRBMD with PID 9572 (C:\Users\feizhou\IdeaProjects\bolg\target\classes started by feizhou in C:\Users\feizhou\IdeaProjects\bolg)
+2020-12-15 22:09:18.063  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : The following profiles are active: dev
+2020-12-15 22:09:18.066  INFO 9572 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a504081: startup date [Tue Dec 15 22:09:18 CST 2020]; root of context hierarchy
+2020-12-15 22:09:18.950  INFO 9572 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-12-15 22:09:18.951  INFO 9572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-15 22:09:18.951  INFO 9572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-12-15 22:09:18.977  INFO 9572 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-15 22:09:18.979  INFO 9572 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 914 ms
+2020-12-15 22:09:19.032  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-12-15 22:09:19.033  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-12-15 22:09:19.033  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-12-15 22:09:19.033  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-12-15 22:09:19.033  INFO 9572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-12-15 22:09:19.189  INFO 9572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:09:19.189  INFO 9572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-15 22:09:19.334  INFO 9572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-12-15 22:09:19.389  INFO 9572 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-12-15 22:09:19.571  INFO 9572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:09:19.694  INFO 9572 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-12-15 22:09:20.094  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a504081: startup date [Tue Dec 15 22:09:18 CST 2020]; root of context hierarchy
+2020-12-15 22:09:20.114  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.logout(javax.servlet.http.HttpSession)
+2020-12-15 22:09:20.114  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.115  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.LoginPage()
+2020-12-15 22:09:20.115  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.blogByTagsController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:09:20.116  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.116  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:09:20.117  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-12-15 22:09:20.117  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.post(com.example.bolg.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-12-15 22:09:20.117  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:09:20.117  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:09:20.117  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:09:20.117  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.post(com.example.bolg.po.Comment,javax.servlet.http.HttpSession)
+2020-12-15 22:09:20.119  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.119  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.input(org.springframework.ui.Model)
+2020-12-15 22:09:20.119  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:09:20.119  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.post(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.119  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editPost(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.119  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:09:20.122  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.122  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-12-15 22:09:20.122  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:09:20.122  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.post(com.example.bolg.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.122  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editPost(com.example.bolg.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:09:20.122  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:09:20.123  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.blogByTypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:09:20.123  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:09:20.123  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-12-15 22:09:20.123  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:09:20.125  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-12-15 22:09:20.125  INFO 9572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-12-15 22:09:20.155  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:09:20.155  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:09:20.167  INFO 9572 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-12-15 22:09:20.177  INFO 9572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:09:20.585  INFO 9572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-15 22:09:20.692  INFO 9572 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-12-15 22:09:20.701  INFO 9572 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-12-15 22:09:20.702  INFO 9572 --- [restartedMain] com.example.bolg.BolgApplication         : Started BolgApplication in 2.706 seconds (JVM running for 3170.004)
+2020-12-15 22:11:04.087  INFO 9572 --- [Thread-47] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a504081: startup date [Tue Dec 15 22:09:18 CST 2020]; root of context hierarchy
+2020-12-15 22:11:04.088  INFO 9572 --- [Thread-47] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-12-15 22:11:04.090  INFO 9572 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:11:07.488  INFO 3008 --- [restartedMain] com.example.bolg.BolgApplication         : Starting BolgApplication on LAPTOP-A3IKRBMD with PID 3008 (C:\Users\feizhou\IdeaProjects\bolg\target\classes started by feizhou in C:\Users\feizhou\IdeaProjects\bolg)
+2020-12-15 22:11:07.489  INFO 3008 --- [restartedMain] com.example.bolg.BolgApplication         : The following profiles are active: dev
+2020-12-15 22:11:07.647  INFO 3008 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@647c557b: startup date [Tue Dec 15 22:11:07 CST 2020]; root of context hierarchy
+2020-12-15 22:11:09.730  INFO 3008 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-12-15 22:11:09.738  INFO 3008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-15 22:11:09.739  INFO 3008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-12-15 22:11:09.846  INFO 3008 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-15 22:11:09.846  INFO 3008 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2199 ms
+2020-12-15 22:11:10.052  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-12-15 22:11:10.057  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-12-15 22:11:10.057  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-12-15 22:11:10.058  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-12-15 22:11:10.058  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-12-15 22:11:10.606  INFO 3008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:11:10.667  INFO 3008 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-15 22:11:10.732  INFO 3008 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-12-15 22:11:10.735  INFO 3008 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-12-15 22:11:10.736  INFO 3008 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-12-15 22:11:10.779  INFO 3008 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-12-15 22:11:11.034  INFO 3008 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-12-15 22:11:11.618  INFO 3008 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-12-15 22:11:11.889  INFO 3008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:11:12.221  INFO 3008 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-12-15 22:11:13.037  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@647c557b: startup date [Tue Dec 15 22:11:07 CST 2020]; root of context hierarchy
+2020-12-15 22:11:13.116  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.LoginPage()
+2020-12-15 22:11:13.119  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.120  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.logout(javax.servlet.http.HttpSession)
+2020-12-15 22:11:13.120  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.blogByTagsController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:11:13.122  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.122  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:11:13.122  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-12-15 22:11:13.122  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:11:13.123  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:11:13.123  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.post(com.example.bolg.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-12-15 22:11:13.123  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:11:13.124  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.post(com.example.bolg.po.Comment,javax.servlet.http.HttpSession)
+2020-12-15 22:11:13.125  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.125  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.input(org.springframework.ui.Model)
+2020-12-15 22:11:13.125  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:11:13.126  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:11:13.126  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editPost(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.126  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.post(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.128  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.129  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-12-15 22:11:13.129  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:11:13.129  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:11:13.129  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editPost(com.example.bolg.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.129  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.post(com.example.bolg.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:11:13.130  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.blogByTypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:11:13.131  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:11:13.131  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-12-15 22:11:13.131  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:11:13.133  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-12-15 22:11:13.133  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-12-15 22:11:13.190  INFO 3008 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:11:13.190  INFO 3008 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:11:13.212  INFO 3008 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-12-15 22:11:13.242  INFO 3008 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:11:14.233  INFO 3008 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-15 22:11:14.341  INFO 3008 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-12-15 22:11:14.401  INFO 3008 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-12-15 22:11:14.407  INFO 3008 --- [restartedMain] com.example.bolg.BolgApplication         : Started BolgApplication in 7.424 seconds (JVM running for 8.52)
+2020-12-15 22:11:20.633  INFO 3008 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-12-15 22:11:20.634  INFO 3008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-12-15 22:11:20.671  INFO 3008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2020-12-15 22:11:20.708  INFO 3008 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:11:20.830  WARN 3008 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-12-15 22:11:20.843  WARN 3008 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-12-15 22:11:20.865  INFO 3008 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:11:21.331 ERROR 3008 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "index": An error happened during template parsing (template: "class path resource [templates/index.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:667)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1087)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1061)
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:335)
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Could not parse as expression: "" (template: "index" - line 54, col 25)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "" (template: "index" - line 54, col 25)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:67)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+
+2020-12-15 22:11:21.336 ERROR 3008 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")] with root cause
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "" (template: "index" - line 54, col 25)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:67)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:667)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1087)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1061)
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:335)
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-12-15 22:12:17.852  INFO 3008 --- [http-nio-8080-exec-3] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:12:17.868  INFO 3008 --- [http-nio-8080-exec-3] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:18:20.181  INFO 3008 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:18:20.202  INFO 3008 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:18:39.592  INFO 3008 --- [http-nio-8080-exec-3] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:18:39.608  INFO 3008 --- [http-nio-8080-exec-3] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:22:10.407  INFO 3008 --- [http-nio-8080-exec-7] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:22:10.426  INFO 3008 --- [http-nio-8080-exec-7] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:22:11.977  INFO 3008 --- [http-nio-8080-exec-6] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:22:11.990  INFO 3008 --- [http-nio-8080-exec-6] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:25:20.223  INFO 3008 --- [http-nio-8080-exec-5] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/search', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.search', args=[Page request [number: 0, size 8, sort: updateTime: DESC], spring, {}]}
+2020-12-15 22:25:20.237  INFO 3008 --- [http-nio-8080-exec-5] com.example.bolg.aspect.LogAspect        : Result ： search
+2020-12-15 22:27:05.991  INFO 3008 --- [http-nio-8080-exec-6] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:27:06.005  INFO 3008 --- [http-nio-8080-exec-6] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:27:14.845  INFO 3008 --- [http-nio-8080-exec-2] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:27:14.858  INFO 3008 --- [http-nio-8080-exec-2] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:27:20.858  INFO 3008 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:27:20.865  INFO 3008 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:27:31.076  INFO 3008 --- [http-nio-8080-exec-7] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:27:31.088  INFO 3008 --- [http-nio-8080-exec-7] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:28:00.074  INFO 3008 --- [Thread-20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@647c557b: startup date [Tue Dec 15 22:11:07 CST 2020]; root of context hierarchy
+2020-12-15 22:28:00.076  INFO 3008 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-12-15 22:28:00.078  INFO 3008 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:28:00.609  INFO 3008 --- [restartedMain] com.example.bolg.BolgApplication         : Starting BolgApplication on LAPTOP-A3IKRBMD with PID 3008 (C:\Users\feizhou\IdeaProjects\bolg\target\classes started by feizhou in C:\Users\feizhou\IdeaProjects\bolg)
+2020-12-15 22:28:00.609  INFO 3008 --- [restartedMain] com.example.bolg.BolgApplication         : The following profiles are active: dev
+2020-12-15 22:28:00.611  INFO 3008 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d5e97e9: startup date [Tue Dec 15 22:28:00 CST 2020]; root of context hierarchy
+2020-12-15 22:28:03.050  INFO 3008 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-12-15 22:28:03.051  INFO 3008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-15 22:28:03.051  INFO 3008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-12-15 22:28:03.081  INFO 3008 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-15 22:28:03.081  INFO 3008 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2470 ms
+2020-12-15 22:28:03.138  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-12-15 22:28:03.139  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-12-15 22:28:03.139  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-12-15 22:28:03.139  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-12-15 22:28:03.139  INFO 3008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-12-15 22:28:03.320  INFO 3008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:28:03.321  INFO 3008 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-15 22:28:03.468  INFO 3008 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-12-15 22:28:03.518  INFO 3008 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-12-15 22:28:03.750  INFO 3008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:28:03.899  INFO 3008 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-12-15 22:28:04.312  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d5e97e9: startup date [Tue Dec 15 22:28:00 CST 2020]; root of context hierarchy
+2020-12-15 22:28:04.331  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.LoginPage()
+2020-12-15 22:28:04.332  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.332  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.logout(javax.servlet.http.HttpSession)
+2020-12-15 22:28:04.332  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.blogByTagsController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:28:04.334  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.334  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:28:04.334  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-12-15 22:28:04.334  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:04.334  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:28:04.334  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.post(com.example.bolg.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-12-15 22:28:04.335  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:04.335  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.post(com.example.bolg.po.Comment,javax.servlet.http.HttpSession)
+2020-12-15 22:28:04.336  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.336  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.input(org.springframework.ui.Model)
+2020-12-15 22:28:04.336  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:28:04.336  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:04.337  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editPost(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.337  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.post(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.339  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.339  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-12-15 22:28:04.339  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:28:04.340  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:04.340  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editPost(com.example.bolg.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.340  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.post(com.example.bolg.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:04.340  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.blogByTypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:28:04.340  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:28:04.341  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-12-15 22:28:04.341  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:04.342  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-12-15 22:28:04.342  INFO 3008 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-12-15 22:28:04.373  INFO 3008 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:28:04.373  INFO 3008 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:28:04.385  INFO 3008 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-12-15 22:28:04.395  INFO 3008 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:28:04.814  INFO 3008 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-15 22:28:04.912  INFO 3008 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-12-15 22:28:04.922  INFO 3008 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-12-15 22:28:04.924  INFO 3008 --- [restartedMain] com.example.bolg.BolgApplication         : Started BolgApplication in 4.388 seconds (JVM running for 1019.037)
+2020-12-15 22:28:14.961  INFO 3008 --- [Thread-35] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d5e97e9: startup date [Tue Dec 15 22:28:00 CST 2020]; root of context hierarchy
+2020-12-15 22:28:14.963  INFO 3008 --- [Thread-35] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-12-15 22:28:14.964  INFO 3008 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:28:18.091  INFO 3420 --- [restartedMain] com.example.bolg.BolgApplication         : Starting BolgApplication on LAPTOP-A3IKRBMD with PID 3420 (C:\Users\feizhou\IdeaProjects\bolg\target\classes started by feizhou in C:\Users\feizhou\IdeaProjects\bolg)
+2020-12-15 22:28:18.092  INFO 3420 --- [restartedMain] com.example.bolg.BolgApplication         : The following profiles are active: dev
+2020-12-15 22:28:18.249  INFO 3420 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@67810f1e: startup date [Tue Dec 15 22:28:18 CST 2020]; root of context hierarchy
+2020-12-15 22:28:20.302  INFO 3420 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-12-15 22:28:20.313  INFO 3420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-15 22:28:20.314  INFO 3420 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-12-15 22:28:20.419  INFO 3420 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-15 22:28:20.419  INFO 3420 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2170 ms
+2020-12-15 22:28:20.615  INFO 3420 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-12-15 22:28:20.619  INFO 3420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-12-15 22:28:20.620  INFO 3420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-12-15 22:28:20.620  INFO 3420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-12-15 22:28:20.620  INFO 3420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-12-15 22:28:21.134  INFO 3420 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:28:21.194  INFO 3420 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-15 22:28:21.256  INFO 3420 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-12-15 22:28:21.258  INFO 3420 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-12-15 22:28:21.260  INFO 3420 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-12-15 22:28:21.305  INFO 3420 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-12-15 22:28:21.563  INFO 3420 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-12-15 22:28:22.011  INFO 3420 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-12-15 22:28:22.250  INFO 3420 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-15 22:28:22.559  INFO 3420 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-12-15 22:28:23.358  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@67810f1e: startup date [Tue Dec 15 22:28:18 CST 2020]; root of context hierarchy
+2020-12-15 22:28:23.439  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.LoginPage()
+2020-12-15 22:28:23.442  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.443  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[POST || GET]}" onto public java.lang.String com.example.bolg.web.admin.adminLoginController.logout(javax.servlet.http.HttpSession)
+2020-12-15 22:28:23.443  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.blogByTagsController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:28:23.445  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.445  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:28:23.445  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-12-15 22:28:23.446  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.post(com.example.bolg.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-12-15 22:28:23.446  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.example.bolg.vo.BlogQuery,org.springframework.ui.Model)
+2020-12-15 22:28:23.446  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:23.447  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:23.447  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.CommentController.post(com.example.bolg.po.Comment,javax.servlet.http.HttpSession)
+2020-12-15 22:28:23.448  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.448  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.input(org.springframework.ui.Model)
+2020-12-15 22:28:23.449  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:28:23.449  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.post(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.449  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editPost(com.example.bolg.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.449  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TagsController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:23.452  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.452  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-12-15 22:28:23.452  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:28:23.452  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.post(com.example.bolg.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.453  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editPost(com.example.bolg.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-12-15 22:28:23.453  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.example.bolg.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:23.454  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.blogByTypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.Long)
+2020-12-15 22:28:23.454  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-12-15 22:28:23.454  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.example.bolg.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-12-15 22:28:23.455  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.example.bolg.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-12-15 22:28:23.456  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-12-15 22:28:23.456  INFO 3420 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-12-15 22:28:23.511  INFO 3420 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:28:23.511  INFO 3420 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:28:23.533  INFO 3420 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-12-15 22:28:23.562  INFO 3420 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-12-15 22:28:24.448  INFO 3420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-15 22:28:24.556  INFO 3420 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-12-15 22:28:24.608  INFO 3420 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-12-15 22:28:24.613  INFO 3420 --- [restartedMain] com.example.bolg.BolgApplication         : Started BolgApplication in 7.009 seconds (JVM running for 7.93)
+2020-12-15 22:29:32.773  INFO 3420 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-12-15 22:29:32.774  INFO 3420 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-12-15 22:29:32.810  INFO 3420 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2020-12-15 22:29:32.844  INFO 3420 --- [http-nio-8080-exec-2] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:29:32.937  WARN 3420 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-12-15 22:29:32.949  WARN 3420 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-12-15 22:29:32.956  INFO 3420 --- [http-nio-8080-exec-2] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:29:42.308  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:29:42.321  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:29:55.079  INFO 3420 --- [http-nio-8080-exec-4] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:29:55.096  INFO 3420 --- [http-nio-8080-exec-4] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:29:58.608  INFO 3420 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:29:58.621  INFO 3420 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:32:56.725  INFO 3420 --- [http-nio-8080-exec-4] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:32:56.738  INFO 3420 --- [http-nio-8080-exec-4] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:36:13.018  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:36:13.037  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:36:32.219  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:36:32.233  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:37:02.379  INFO 3420 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:37:02.395  INFO 3420 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:37:09.238  INFO 3420 --- [http-nio-8080-exec-3] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:37:09.250  INFO 3420 --- [http-nio-8080-exec-3] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:40:16.043  INFO 3420 --- [http-nio-8080-exec-5] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:40:16.056  INFO 3420 --- [http-nio-8080-exec-5] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:40:20.246  INFO 3420 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:40:20.252  INFO 3420 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:40:38.355  INFO 3420 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:40:38.362  INFO 3420 --- [http-nio-8080-exec-1] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:41:27.789  INFO 3420 --- [http-nio-8080-exec-8] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:41:27.801  INFO 3420 --- [http-nio-8080-exec-8] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:41:30.693  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:41:30.698  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:41:51.764  INFO 3420 --- [http-nio-8080-exec-5] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:41:51.771  INFO 3420 --- [http-nio-8080-exec-5] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:41:58.034  INFO 3420 --- [http-nio-8080-exec-2] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:41:58.044  INFO 3420 --- [http-nio-8080-exec-2] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 22:43:44.057  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.example.bolg.web.blogByTypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, -1]}
+2020-12-15 22:43:44.063  INFO 3420 --- [http-nio-8080-exec-10] com.example.bolg.aspect.LogAspect        : Result ： blogtypes
+2020-12-15 22:43:47.740  INFO 3420 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.example.bolg.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-12-15 22:43:47.750  INFO 3420 --- [http-nio-8080-exec-9] com.example.bolg.aspect.LogAspect        : Result ： index
+2020-12-15 23:03:33.681  INFO 3420 --- [Thread-23] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@67810f1e: startup date [Tue Dec 15 22:28:18 CST 2020]; root of context hierarchy
+2020-12-15 23:03:33.684  INFO 3420 --- [Thread-23] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-12-15 23:03:33.685  INFO 3420 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

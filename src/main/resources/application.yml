@@ -1,0 +1,9 @@
+
+spring:
+  thymeleaf:
+    mode:HTML
+  profiles:
+    active: dev
+
+Comment.avatar: /images/ces.jpg
+

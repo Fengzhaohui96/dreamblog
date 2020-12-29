@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="" content="width=device-width,initial-scale=1.0">
+    <title th:replace="${title}">详情页</title>
+    <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/css/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/css/tocbot.css}">
+</head>
+
+
+<nav id="nav" th:fragment="menu(n)" class="gird-header"  style="display: none" >
+    <div class="ui container">
+        <!--导航-->
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">个人博客</h2>
+            <a href="#" th:href="@{/}"class=" m-item item m-mobile-hide" th:classappend="${n==1}?'active'"> <i class=" home icon"></i>  首页</a>
+            <a href="#"  th:href="@{/types/-1}" class="  m-item item m-mobile-hide" th:classappend="${n==2}?'active'"> <i class=" idea icon"></i>  分类</a>
+            <a href="#" th:href="@{/tags/-1}" class=" m-item item m-mobile-hide" th:classappend="${n==3}?'active'"> <i class="  tags icon"></i>  标签</a>
+            <a href="#" class=" m-item item m-mobile-hide" th:classappend="${n==4}?'active'"> <i class=" clone icon"></i>  归档</a>
+            <a href="#" class=" m-item item m-mobile-hide" th:classappend="${n==5}?'active'"><i class="info icon"></i> 关于我</a>
+            <div class="right item m-mobile-hide">
+                <div class="ui icon inverted transparent input m-margin-tb-tiny">
+                    <form name="search" action="#" th:action="@{/search}" method="post" target="_bank">
+                        <input type="text" name="query" placeholder="搜索...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+
+    </div>
+
+
+    <a href="#" class=" ui menu toggle black icon button  m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+
+    </a>
+</nav>
+
+
+
+</body>
+</html>
