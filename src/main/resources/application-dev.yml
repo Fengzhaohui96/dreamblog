@@ -2,9 +2,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://101.132.227.205:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: fzh020688
+    url: jdbc:mysql://****?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: ****
+    password: ****
 
   jpa:
     hibernate:
